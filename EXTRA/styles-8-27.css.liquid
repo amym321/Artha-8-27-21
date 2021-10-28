@@ -1,0 +1,439 @@
+
+/************************************************/
+/******** added code - am / storetasker *********/
+/************************************************/
+
+/*  padding for main linklists  */
+.menu-padding-all { 
+	margin-left: 5px;
+  margin-right: 5px;
+}
+.menu-padding-social {
+  margin-left: 75px;
+}
+
+/* padding under main links */
+.menu a {
+  padding-bottom: 0;
+}
+
+/* text color for Social linklist */
+.link-color {
+  /* color: #D87B27  !important; */
+  color: {{ settings.link_color }} !important;
+}
+
+/* padding under logo */
+.logo-alignment--center .header__logo {
+  /* padding-bottom: 20px; */
+}
+
+/* padding around logo & nav  */
+/* .main-nav {
+  padding: 0 20px;
+} */
+
+.logo-position--center.menu-position--block .header__logo {
+  margin: 0 0 10px 0;
+}
+
+/* Inspiration sublinks */
+.vertical-menu_submenu.vertical-menu--align-right-inspiration {
+  left: none !important;
+}
+
+/* shift main menu dropdown sublinks so they align with main link */
+.menu .vertical-menu_submenu li { 
+  padding: 0 26px;
+}
+
+/* shift left the white box that main menu dropdown sublinks are in  */
+.menu .vertical-menu_submenu { 
+  left: -20px; 
+}
+.social-link-box { 
+  left: 50px !important;
+}
+
+/* collection title margin */
+.collection-info__caption .title {
+  margin-top: 30px;
+}
+
+/* CTA buttons on Text Columns with Images */
+a.continue-button {
+  color: #ffffff !important;
+  background-color: #A08A16 !important; 
+  border: none !important;
+  font-weight:400 !important;
+}
+a.continue-button:hover {
+  background-color: #7E6A00  !important; 
+}
+
+/* Social buttons on PDP (twitter & facebook) */
+.product-tabs .social_buttons a {
+  color: #D55D1D;
+}
+
+/* make original down-arrows on mobile menu transparent */
+#mobile_menu li a span.icon-down-arrow,
+footer span.icon-down-arrow {
+  color: #ffffff00 !important;
+}
+
+/* Footer styling */
+.footer {
+  padding-top: 50px;
+}
+
+/* @media (max-width: 780px) { */
+  .footer .footer-menu-wrap h6 {
+    font-size: 15px !important;
+  }
+/* } */
+
+/* Footer newletter email boxes styling */
+@media only screen and (min-width: 750px) {
+  .footer .newsletter form {
+    display: block;
+  }
+  .footer .contact_email {
+    margin-bottom: 15px;
+  }
+  .footer #contact_form input.newsletter-form__sign-up[type=submit] {
+    width: 100%;
+  }
+}
+
+/* hide the close icon for top announcement bar */
+.promo-banner__close:before {
+  color: transparent !important;
+}
+
+/* Testimonial styling */
+.homepage-slideshow, 
+.shopify-section--testimonials {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.shopify-section--testimonials,
+.testimonial-block .gallery-cell, 
+.testimonial-slideshow,
+.shopify-section--testimonials .gallery-cell,
+.testimonial-block.gallery-cell.testimonial-block--no-image {
+ background-color: #f3f0ec !important;    
+}
+
+@media (min-width: 750px) {
+ .shopify-section--testimonials {
+   padding-top: 20px;
+   padding-bottom: 20px;
+ }
+}
+
+.caption-content.testimonial-text .headline, .caption-content.testimonial-text h2,
+.caption-content.testimonial-text .subtitle  {
+ color: #333;
+}
+
+.testimonial-block .headline {
+ font-family: {{ settings.headline__font.family }}, {{ settings.headline__font.fallback_families }};
+ font-weight: {{ settings.headline__font.weight }};
+ font-style: {{ settings.headline__font.style }};
+ text-transform: {{ settings.headline_font_style }};
+ line-height: 1.5;
+ color: {{ settings.headline_color }};
+ display: block;
+ letter-spacing: {{ settings.headline_letter_spacing | append: 'px' }};
+ text-rendering: optimizeLegibility;
+ font-size: {{ font_size_header | times: 0.9 | floor | append: 'px' }};
+ /* margin-bottom: 0.75em; */
+}
+
+@media screen and (max-width: 780px) {
+  .shopify-section--testimonials .set-static .caption {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* back In Stock Date styling */
+.back-in-stock {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 5px;
+  text-transform: {{ settings.regular_font_style }};
+}
+
+
+/* Editorial Landing Page styling - hero caption */
+.page-details-index-editorial .caption {
+  top: 75%;
+}
+
+/* Editorial Landing Page styling - image gallery */
+@media only screen and (min-width: 799px) {
+  .page-details-index-editorial .block__image_gallery .container .column {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}
+
+/* Editorial Landing Page styling - banner image button */
+.page-details-index-editorial .global-button--banner-highlighted-desktop  {
+  color: {{ settings.link_color }} !important;
+  background-color: #ffffff00 !important;
+  border-color: #ffffff00 !important;
+  font-weight: 700;
+  font-size: {{ settings.headline_font_size | append: 'px' }};
+  /* font-size: 30px !important; */
+}
+@media only screen and (max-width: 480px) {
+  .page-details-index-editorial .global-button--banner-highlighted-desktop {
+    font-size: 2.6em !important;
+  }
+}
+@media only screen and (max-width: 798px) {
+  .page-details-index-editorial .global-button--banner-highlighted-desktop {
+    font-size: {{ settings.slideshow_headline_size | divided_by: 1.5 | append: 'px' }} !important;
+  }
+}
+@media only screen and (min-width: 799px) {
+  .page-details-index-editorial .global-button--banner-highlighted-desktop {
+    font-size: {{ settings.slideshow_headline_size | divided_by: 1.2 | append: 'px' }} !important;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .page-details-index-editorial .global-button--banner-highlighted-desktop {
+    font-size: {{ settings.slideshow_headline_size | append: 'px' }} !important;
+  }
+}
+
+
+/* Editorial Landing Page styling - banner image down arrow */
+@media only screen and (min-width: 481px) {
+  .page-details-index-editorial #banner-page-details-index-editorial-template-0 span.icon-down-arrow,
+  .page-details-index-editorial #banner-page-details-index-editorial-template-0 span.icon-down-arrow:before,
+  .page-details-index-editorial #banner-page-details-index-editorial-template-0 span.icon-down-arrow:hover {
+    /* padding: 50px 0 0 0; */
+    padding: 0;
+    font-size: 50px;
+    color: {{ settings.link_color }};
+    /* color: black ; */
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-details-index-editorial  span.icon-down-arrow,
+  .page-details-index-editorial span.icon-down-arrow:before,
+  .page-details-index-editorial span.icon-down-arrow:hover {
+    padding: 0;
+    font-size: 0px;
+    color: #ffffff00;
+  }
+}
+
+/* Editorial Landing Page styling - image gallery from sass*/
+/* @media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .page-details-index-editorial .block__image_gallery .container {
+      position: relative;
+      width: 100% !important;
+  }
+} */
+@media only screen and (min-width: 799px)  {
+  .page-details-index-editorial .block__image_gallery .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .page-details-index-editorial .block__image_gallery .container .one-half.column {
+    width: calc(50% - 20px);
+  }
+}
+@media only screen and (max-width: 798px)  {
+  .page-details-index-editorial .block__image_gallery .container .one-half.column {
+    width: calc(100% - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* collection images of homepage Collection List to have no overlay */
+.list-collections .thumbnail .thumbnail-overlay {
+  background-color: #ffffff00 !important; 
+}
+
+/* Titles on collection images of homepage Collection List  */
+.product-wrap .thumbnail-overlay .title {
+  /* color: #ffffff !important; */
+  color: #000000 !important;
+}	
+
+/* Titles on collection images of homepage Collection List to show irrespective of hover */
+.product-wrap:hover .thumbnail-overlay,
+.product-wrap .thumbnail-overlay {  
+  opacity: 1 !important; 
+}
+
+/* Collection List title box & Testimonial source box styling */
+/* .shopify-section--testimonials p a, */
+.list-collections .product-wrap .collection-details { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  padding: 13px 10px;
+  text-align: center;
+  line-height: 1.2;
+  transition: all .2s linear;
+  border-color: var(--button-color-border,#333333);
+  background: var(--button-color-background,#333333);
+  color: var(--button-color-text,#fff);
+}
+
+/* margin between Collection List collections */
+.list-collections .product-wrap { 
+  margin-bottom: 20px; 
+}
+
+/* no bottom margin under collection list title inside box */
+.list-collections  .thumbnail .title { 
+  margin-bottom: 0; 
+}
+
+/* Collection List title box styling */
+.product-wrap:hover .collection-details { 
+   border-color: var(--button-color-border,#3c3c3c); 
+   background: var(--button-color-background,#3c3c3c);
+}
+
+.thumbnail-overlay .title {
+  padding: 0 1.3em;
+}
+
+.collection-details h3{ 
+  margin: 0 !important;
+}
+
+/* Collection list title visible on mobile */ 
+.list-collections .thumbnail .thumbnail-overlay, .product-list .thumbnail .thumbnail-overlay, .slider-gallery .thumbnail .thumbnail-overlay {
+  display: block !important;
+ }
+
+/* apply css to Collection List that's normally only applied when settings.thumbnail_hover_enabled  */
+.list-collections-wrapper .collection-info__caption {
+  display: block;
+}
+.list-collections-wrapper .product-wrap {
+  text-align: center;
+  position: relative;
+}
+.list-collections-wrapper .product-wrap:hover .collection-details {
+  opacity: 1;
+  transform: none;
+}
+.list-collections-wrapper .product-wrap:hover .thumbnail-overlay__button {
+  opacity: 1;
+  transform: none;
+}
+.list-collections-wrapper .product-wrap:hover .thumbnail-overlay {
+  opacity: 1;
+}
+.list-collections-wrapper .thumbnail-overlay .info {
+  top: 50%;
+  transform: translateY(-50.1%);
+  padding: 10px 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.list-collections-wrapper .thumbnail-overlay .collection-details {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  display: block;
+}
+.list-collections-wrapper .thumbnail-overlay .title {
+  display: block;
+  padding: 0 1.3em;
+  position: relative;
+  color: {{ settings.product_hover_text_color }};
+}
+.list-collections .thumbnail .product-info__caption {
+  display: block;
+}
+.list-collections .product-wrap {
+  position: relative;
+}
+.list-collections .product-wrap:hover .product-details {
+  opacity: 1;
+  transform: none;
+}
+.list-collections .product-wrap:hover .quick_shop {
+  opacity: 1;
+  transform: none;
+}
+.list-collections .product-wrap:hover .thumbnail-overlay {
+  opacity: 1;
+}
+.list-collections .thumbnail-overlay .thumbnail-overlay__button {
+  margin-top: 2rem;
+  opacity: 0;
+  pointer-events: all;
+  transform: translate3d(0, 100%, 0);
+}
+.list-collections .thumbnail-overlay .info {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  pointer-events: none;
+  cursor: pointer;
+  color: {{ settings.product_hover_text_color }};
+  /* font-size: {{ settings.regular_font_size | append: 'px' }}; */
+  font-size: {{ settings.button_font_size | append: 'px' }};
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */    /* removed this. - am */
+  justify-content: flex-end;        /* changed to this. - am */
+  padding-bottom: 35px;             /* added this. - am. added 60px, changed to 35px*/
+}
+.list-collections .thumbnail-overlay .product-details {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  display: block;
+}
+.list-collections .thumbnail-overlay .title {
+  display: block;
+  padding: 0 1.3em;
+  position: relative;
+  color: {{ settings.product_hover_text_color }};
+}
+
+.list-collections .product-wrap .collection-details, .shopify-section--testimonials p a {
+  /* background-color: rgb(95, 110, 35); 
+  border-color: rgb(95, 110, 35); */
+  background-color: #ffffff; 
+  border-color: #ffffff;
+}
+/* END - apply css to Collection List that's normally only applied when settings.thumbnail_hover_enabled  */
+
+
+
+/* {% if block.settings.title contains 'Handcrafted' or block.settings.title contains 'Handgemacht' %} 
+ .button-grid-container { margin-top: 50px; }
+{% endif %} */
